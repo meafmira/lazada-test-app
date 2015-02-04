@@ -19,8 +19,6 @@ module.exports = (Lazada, $q) ->
             name: $($td[0]).text()
             value: $($td[1]).text()
 
-        console.log productInfo
-
         deferred.resolve productInfo
 
       deferred.promise
