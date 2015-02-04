@@ -4,7 +4,7 @@ module.exports = ($q) ->
       deferred = $q.defer()
       $.get(
         'http://cors-anywhere.herokuapp.com/' +
-          'http://www.lazada.vn/apple-iphone-6-16gb-xam-hang-nhap-khau-240697.html',
+          url
         (response) ->
           deferred.resolve response
       )

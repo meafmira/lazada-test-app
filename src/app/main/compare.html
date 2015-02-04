@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <a ui-sref="main" class="btn btn-default btn-block">Back</a>
+      <table class="table">
+        <tr>
+          <th></th>
+          <th ng-bind="compare.products[0].title"></th>
+          <th ng-bind="compare.products[1].title"></th>
+        </tr>
+        <tr>
+          <th>
+
+          </th>
+          <th>
+            <img ng-src="{{compare.products[0].img}}" class="img-responsive">
+          </th>
+          <th>
+            <img ng-src="{{compare.products[1].img}}" class="img-responsive">
+          </th>
+        </tr>
+        <tr ng-repeat="spec in compare.commonSpecs">
+          <th ng-bind="spec.name"></th>
+          <td ng-bind="compare.products[0].specHash[spec.name]"></td>
+          <td ng-bind="compare.products[1].specHash[spec.name]"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
