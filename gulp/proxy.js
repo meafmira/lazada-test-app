@@ -21,7 +21,7 @@ var chalk = require('chalk');
 /*
  * Location of your backend server
  */
-var proxyTarget = 'http://server/context/';
+var proxyTarget = 'http://lazada.vn';
 
 var proxy = httpProxy.createProxyServer({
   target: proxyTarget

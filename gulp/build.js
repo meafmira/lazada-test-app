@@ -37,7 +37,7 @@ gulp.task('browserify', function() {
     cache: {}, packageCache: {}, fullPaths: true,
     entries: ['./src/app/index.coffee'],
     extensions: ['.coffee'],
-    paths: [ './bower_components', 'src/components' ],
+    paths: [ './bower_components', './node_modules', 'src/components' ],
     debug: true,
     insertGlobals: true
   });

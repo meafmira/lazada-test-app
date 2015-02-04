@@ -10,6 +10,14 @@ var browserSync = require('browser-sync');
 
 var middleware = require('./proxy');
 
+var url = require('url');
+var proxy = require('proxy-middleware');
+
+//var proxyOptions = url.parse('http://lazada.vn');
+//proxyOptions.route = '/*';
+
+//var middleWares = [proxy(proxyOptions)];
+
 function browserSyncInit(baseDir, files, browser) {
   browser = browser === undefined ? 'default' : browser;
 
@@ -24,7 +32,7 @@ function browserSyncInit(baseDir, files, browser) {
     startPath: '/',
     server: {
       baseDir: baseDir,
-      middleware: middleware,
+      //middleware: middleWares,
       routes: routes
     },
     browser: browser
